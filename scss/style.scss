@@ -1,3 +1,74 @@
 @import 'homepage';
+@import 'restaurant-page';
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+* {
+    font-family: 'Roboto';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+$primary-color: #9356DC;
+
+$secondary-color: #FF79DA;
+
+$tertiary-color: #99E2D0;
+
+$background-footer-color: #353535;
+
+$main-font-color: #0000;
+
+$alternative-font-color: #FFFFFF;
+
+.header-container {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0 0.5rem 0;
+
+    &_logo {
+        width: 11.5rem;
+    }
+}
+
+.footer-container {
+    background: $background-footer-color;
+    padding: 1.375rem 0 0.875rem 1.5rem;
+}
+
+.footer-list {
+    list-style-type: none;
+
+    &_icon {
+        color: $alternative-font-color;
+        width: 12px;
+        height:13px;
+    }
+
+    &_title {
+        color: $alternative-font-color;
+        font-family: 'Shrikhand';
+        font-weight: 400;
+        font-size: 18;
+        margin-bottom: 1rem;
+    }
+
+    &_disposition {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        align-items: center;
+    }
+    
+    &_link {
+        color: $alternative-font-color;
+        text-decoration: none;
+        margin-bottom: 0.5rem;
+        font-size: 16px;
+    }
+    
+    &_icon {
+        color: $alternative-font-color;
+    }
+}
