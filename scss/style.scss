@@ -16,24 +16,48 @@ $secondary-color: #FF79DA;
 
 $tertiary-color: #99E2D0;
 
-$background-footer-color: #353535;
+$primary-background-color: #F6F6F6;
+
+$secondary-background-color: #FFFFFF;
+
+$footer-background-color: #353535;
 
 $main-font-color: #0000;
 
-$alternative-font-color: #FFFFFF;
+$form-background-color: #EAEAEA;
+
+
+
 
 .header-container {
     display: flex;
     justify-content: center;
     padding: 1rem 0 0.5rem 0;
+    box-shadow: 0px 2px 4px rgb(0, 0, 0, 0.5);
 
     &_logo {
         width: 11.5rem;
     }
 }
 
+.btn {
+    background: linear-gradient($secondary-color, $primary-color);
+    border: none;
+    border-radius: 1.8rem;
+    color: $secondary-background-color;
+    font-size: 16px;
+    font-weight: 500;
+    box-shadow: 0px 4px 4px rgb(0, 0, 0, 0.5);
+
+    &_command {
+        padding: 1rem 3rem;
+    }
+}
+
+
+
 .footer-container {
-    background: $background-footer-color;
+    background: $footer-background-color;
     padding: 1.375rem 0 0.875rem 1.5rem;
 }
 
@@ -41,13 +65,13 @@ $alternative-font-color: #FFFFFF;
     list-style-type: none;
 
     &_icon {
-        color: $alternative-font-color;
+        color: $secondary-background-color;
         width: 12px;
         height:13px;
     }
 
     &_title {
-        color: $alternative-font-color;
+        color: $secondary-background-color;
         font-family: 'Shrikhand';
         font-weight: 400;
         font-size: 18;
@@ -62,13 +86,9 @@ $alternative-font-color: #FFFFFF;
     }
     
     &_link {
-        color: $alternative-font-color;
+        color: $secondary-background-color;
         text-decoration: none;
         margin-bottom: 0.5rem;
         font-size: 16px;
-    }
-    
-    &_icon {
-        color: $alternative-font-color;
     }
 }
