@@ -2,6 +2,8 @@
 @import 'restaurant-page';
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import 'mixins';
+@import 'variables';
 
 * {
     font-family: 'Roboto';
@@ -10,22 +12,10 @@
     box-sizing: border-box;
 }
 
-$primary-color: #9356DC;
 
-$secondary-color: #FF79DA;
-
-$tertiary-color: #99E2D0;
-
-$primary-background-color: #F6F6F6;
-
-$secondary-background-color: #FFFFFF;
-
-$footer-background-color: #353535;
-
-$main-font-color: #0000;
-
-$form-background-color: #EAEAEA;
-
+.bold_txt {
+    font-weight: 700;
+}
 
 
 
@@ -40,21 +30,11 @@ $form-background-color: #EAEAEA;
     }
 }
 
-.btn {
-    background: linear-gradient($secondary-color, $primary-color);
-    border: none;
-    border-radius: 1.8rem;
-    color: $secondary-background-color;
-    font-size: 16px;
-    font-weight: 500;
-    box-shadow: 0px 4px 4px rgb(0, 0, 0, 0.5);
 
-    &_command {
+
+.btn_command {
         padding: 1rem 3rem;
     }
-}
-
-
 
 .footer-container {
     background: $footer-background-color;

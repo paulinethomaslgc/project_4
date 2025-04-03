@@ -1,25 +1,16 @@
-* {
+ @import 'mixins';
+ @import 'variables';
+
+ * {
     font-family: 'Roboto';
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-$primary-color: #9356DC;
-
-$secondary-color: #FF79DA;
-
-$tertiary-color: #99E2D0;
-
-$primary-background-color: #F6F6F6;
-
-$secondary-background-color: #FFFFFF;
-
-$footer-background-color: #353535;
-
-$main-font-color: #0000;
-
-$form-background-color: #EAEAEA;
+.section-title_size {
+    font-size: 24px;
+}
 
 .form-container {
     display: flex;
@@ -49,8 +40,6 @@ $form-background-color: #EAEAEA;
     padding: 2.5rem 0 3.75rem 0;
 
     &_title {
-        font-size: 24px;
-        font-weight: 700;
         margin: 0 2.5rem 1rem 2.5rem;
     }
 
@@ -62,7 +51,49 @@ $form-background-color: #EAEAEA;
     }
 
     &_btn {
+        @include btn;
         padding: 1rem 1.25rem;
         width: 14rem;
     }
 }
+
+.working-container {
+    padding: 3rem 0 4.25rem 1.25rem;
+}
+
+.step-container {
+    display: flex;
+    align-items: center;
+    &_section-title {
+        margin:  0 0 1.625rem 1.25rem;;
+    }
+
+    &_ordinal-nb {
+        background: $primary-color;
+        border-radius: 1rem;;
+        padding: 0.25rem 0.5rem;
+        color: $secondary-background-color;
+        margin: 0 0 1.5rem 1.25rem;
+    } 
+
+    &_card {
+        @include card;
+        background: $primary-background-color;
+        display: flex;
+        padding: 1.5rem;
+        gap: 1rem;
+        font-size: 16px;
+        font-weight: 500;
+        margin: 0 0 1.5rem 2rem;
+
+
+
+        &_icon {
+            color: $light-icon-color;
+        }
+    }
+}
+.absolute-position {
+    position:absolute;
+}
+
