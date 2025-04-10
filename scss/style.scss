@@ -17,28 +17,56 @@
     font-weight: 700;
 }
 
-
+.header-disposition {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
 
 .header-container {
     display: flex;
-    justify-content: center;
-    padding: 1rem 0 0.5rem 0;
+    align-items: center;
+    padding: 1rem 1rem 0.5rem 1rem;
     box-shadow: 0px 2px 4px rgb(0, 0, 0, 0.2);
     z-index: 3;
     position: relative;
+    width: 100%;
 
     &_logo {
         width: 11.5rem;
     }
 }
 
-.btn_command {
-        padding: 1rem 3rem;
+.header_img {
+    height: 17rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.fa-arrow-left {
+        color: $main-font-color;
     }
+
+.btn_command {
+        @include btn;
+        padding: 1rem 3rem;
+
+        &_disposition {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+
+.like {
+    width: 22px;
+    height: 21px;
+}
 
 .footer-container {
     background: $footer-background-color;
     padding: 1.375rem 0 0.875rem 1.5rem;
+    width: 100%;
 }
 
 .footer-list {

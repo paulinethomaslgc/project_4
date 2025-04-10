@@ -63,7 +63,7 @@
 }
 
 .working-container {
-  padding: 3rem 1.25rem 4.25rem 1.25rem;
+  padding: 3rem 1.25rem;
 }
 
 .step-container {
@@ -80,7 +80,7 @@
   position: relative;
 }
 .step-container_section-title {
-  margin: 0 0 1.625rem 1.25rem;
+  padding-bottom: 1.5rem;
 }
 .step-container_ordinal-nb {
   background: #9356DC;
@@ -131,7 +131,7 @@
 .restaurant-card_img {
   object-fit: cover;
   width: 100%;
-  height: 10.5rem;
+  height: 11rem;
   border-radius: 1.25rem 1.25rem 0 0;
 }
 .restaurant-card_content {
@@ -157,29 +157,135 @@
   box-sizing: border-box;
 }
 
+.main-container {
+  position: relative;
+}
+
+.menu {
+  padding: 2rem 1rem;
+  background: #F6F6F6;
+  border-radius: 2.5rem 2.5rem 0 0;
+  position: relative;
+  width: 100%;
+  top: -2.5rem;
+}
+.menu_title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 2rem 2rem 0 0;
+}
+.menu_title {
+  font-family: "Shrikhand";
+  font-size: 28px;
+  padding-bottom: 2.5rem;
+}
+.menu_part {
+  padding: 0 1rem 2.5rem 1rem;
+}
+.menu_part_subtitle {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 300;
+  padding-bottom: 2rem;
+}
+.menu_part_underlined {
+  text-decoration: underline;
+  text-underline-offset: 13px;
+  text-decoration-color: #99E2D0;
+  text-decoration-thickness: 3px;
+}
+.menu_card {
+  border-radius: 1.25rem;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.75rem;
+}
+.menu_card_title {
+  font-size: 18px;
+  font-weight: 500;
+  padding-bottom: 5px;
+}
+.menu_card_txt {
+  font-size: 15px;
+  font-weight: 300;
+}
+.menu_card_price {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+/*buttons style*/
+/*cards style*/
+/*Colors*/
+* {
+  font-family: "Roboto";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .bold_txt {
   font-weight: 700;
 }
 
-.header-container {
+.header-disposition {
   display: flex;
   justify-content: center;
-  padding: 1rem 0 0.5rem 0;
+  width: 100%;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1rem 0.5rem 1rem;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
   z-index: 3;
   position: relative;
+  width: 100%;
 }
 .header-container_logo {
   width: 11.5rem;
 }
 
+.header_img {
+  height: 17rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.fa-arrow-left {
+  color: #000000;
+}
+
 .btn_command {
+  background: linear-gradient(#FF79DA, #9356DC);
+  border: none;
+  border-radius: 1.8rem;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 500;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
   padding: 1rem 3rem;
+}
+.btn_command_disposition {
+  display: flex;
+  justify-content: center;
+}
+
+.like {
+  width: 22px;
+  height: 21px;
 }
 
 .footer-container {
   background: #353535;
   padding: 1.375rem 0 0.875rem 1.5rem;
+  width: 100%;
 }
 
 .footer-list {
