@@ -26,13 +26,12 @@
         justify-content: space-between;
         align-items: center;
         border-radius: 2rem 2rem 0 0;
+        padding-bottom: 2.5rem;
     }
 
     &_title {
     font-family: 'Shrikhand';
     font-size: 28px;
-    padding-bottom: 2.5rem;
-    
     }
 
     &_part { 
@@ -52,6 +51,7 @@
             text-decoration-thickness: 3px;
         }
     }
+
     &_card {
         @include card;
         display: flex;
@@ -76,8 +76,4 @@
             font-weight: 700;
         }
     }
-    
-
-
-
 }
