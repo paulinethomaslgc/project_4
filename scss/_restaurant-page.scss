@@ -8,19 +8,13 @@
    box-sizing: border-box;
 }
 
-.main-container {
-    position: relative;
-}
-
 .menu {
     padding: 2rem 1rem;
     background: $primary-background-color;
     border-radius: 2.5rem 2.5rem 0 0;
-    position: relative;
     width: 100%;
-    top: -2.5rem;
+    margin-top: -2.5rem;
     
-
     &_title-container {
         display: flex;
         justify-content: space-between;
@@ -56,6 +50,7 @@
         @include card;
         display: flex;
         justify-content: space-between;
+        background: $secondary-background-color;
         align-items: flex-end;
         padding: 0.75rem 1rem;
         margin-bottom: 0.75rem;
@@ -77,3 +72,4 @@
         }
     }
 }
+
