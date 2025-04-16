@@ -73,8 +73,29 @@
   font-size: 16px;
   font-weight: 500;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  padding: 1rem 3rem;
+  position: relative;
+  z-index: 1;
   padding: 1rem 1.25rem;
   width: 14rem;
+}
+.hero-container_btn:hover::after {
+  opacity: 1;
+}
+.hero-container_btn::after {
+  content: "";
+  border-radius: 1.8rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(rgb(255, 146.5, 225.0410447761), rgb(160.5, 107.125, 224.375));
+  box-shadow: 0px 9px 9px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 500ms;
 }
 
 .working-container {
@@ -427,7 +448,28 @@ body {
   font-size: 16px;
   font-weight: 500;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
   padding: 1rem 3rem;
+  position: relative;
+  z-index: 1;
+  padding: 1rem 3rem;
+}
+.btn_command:hover::after {
+  opacity: 1;
+}
+.btn_command::after {
+  content: "";
+  border-radius: 1.8rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(rgb(255, 146.5, 225.0410447761), rgb(160.5, 107.125, 224.375));
+  box-shadow: 0px 9px 9px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 500ms;
 }
 .btn_command_disposition {
   display: flex;
