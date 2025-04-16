@@ -244,24 +244,9 @@
 
 @media (min-width: 768px) {
   .main-container {
-    margin-left: 6.5rem;
-    margin-right: 6.5rem;
-  }
-}
-@media (min-width: 1024px) {
-  .main-container {
-    margin-left: 10rem;
-    margin-right: 10rem;
-  }
-}
-@media (min-width: 1444px) {
-  .main-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 1444px;
-    margin-left: 11rem;
-    margin-right: 11rem;
   }
 }
 
@@ -275,22 +260,20 @@
 }
 @media (min-width: 768px) {
   .menu {
+    width: 75%;
     display: flex;
     flex-direction: column;
-    padding-left: 7rem;
-    padding-right: 7rem;
+    align-items: center;
   }
 }
 @media (min-width: 1024px) {
   .menu {
-    padding-left: 11rem;
-    padding-right: 11rem;
+    width: 70%;
   }
 }
 @media (min-width: 1444px) {
   .menu {
-    padding-left: 13rem;
-    padding-right: 13rem;
+    width: 65%;
   }
 }
 .menu_title-container {
@@ -312,6 +295,16 @@
 }
 .menu_part {
   padding: 0 1rem 2.5rem 1rem;
+}
+@media (min-width: 768px) {
+  .menu_part {
+    width: 75%;
+  }
+}
+@media (min-width: 1444px) {
+  .menu_part {
+    width: 60%;
+  }
 }
 .menu_part_subtitle {
   text-transform: uppercase;
@@ -356,6 +349,10 @@
   font-weight: 700;
 }
 
+.btn_command_disposition {
+  margin-bottom: 1.5rem;
+}
+
 /*buttons style*/
 /*cards style*/
 /*Colors*/
@@ -370,7 +367,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 1600px;
   margin: auto;
 }
 
