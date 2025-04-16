@@ -16,7 +16,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 1800px;
+    max-width: 1600px;
     margin: auto;
 }
 
@@ -38,6 +38,10 @@ body {
     z-index: 3;
     position: relative;
     width: 100%;
+
+    @media (min-width: 768px) {
+        padding: 2rem;
+    }
 
     &_logo {
         width: 11.5rem;
