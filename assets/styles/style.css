@@ -1,7 +1,7 @@
 /*buttons style*/
 /*cards style*/
 /*Colors*/
-/*Variables for keyframes appearance aplied on menu-cars*/
+/*Variables for keyframes appearance applied on menu-cards*/
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 .loader-background {
@@ -333,7 +333,7 @@
 /*buttons style*/
 /*cards style*/
 /*Colors*/
-/*Variables for keyframes appearance aplied on menu-cars*/
+/*Variables for keyframes appearance applied on menu-cards*/
 .loader-background {
   background: white;
   z-index: 998;
@@ -552,23 +552,59 @@
   font-size: 15px;
   font-weight: 700;
 }
+.menu_alt-card {
+  border-radius: 1.25rem;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  background: #FFFFFF;
+  align-items: flex-end;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.75rem;
+  gap: 1.5rem;
+  opacity: 0;
+  animation: appearance 5000ms forwards;
+}
+.menu_alt-card--1 {
+  animation-delay: 500ms;
+}
+.menu_alt-card--2 {
+  animation-delay: 1000ms;
+}
+.menu_alt-card--3 {
+  animation-delay: 1500ms;
+}
+.menu_alt-card--4 {
+  animation-delay: 2000ms;
+}
+.menu_alt-card--5 {
+  animation-delay: 2500ms;
+}
+.menu_alt-card--6 {
+  animation-delay: 3000ms;
+}
+.menu_alt-card--7 {
+  animation-delay: 3500ms;
+}
+.menu_alt-card--8 {
+  animation-delay: 4000ms;
+}
+.menu_alt-card--9 {
+  animation-delay: 4500ms;
+}
+.menu_alt-card--10 {
+  animation-delay: 5000ms;
+}
 
 .btn_command_disposition {
   margin-bottom: 1.5rem;
 }
 
-@keyframes appearance {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 /*buttons style*/
 /*cards style*/
 /*Colors*/
-/*Variables for keyframes appearance aplied on menu-cars*/
+/*Variables for keyframes appearance applied on menu-cards*/
 * {
   font-family: "Roboto";
   margin: 0;
@@ -731,22 +767,21 @@ a {
 .fa-heart {
   font-size: 21px;
   position: absolute;
-  margin-top: -8px;
+  right: 40px;
   cursor: pointer;
 }
 .fa-heart_empty {
-  color: #EAEAEA;
+  color: black;
 }
 .fa-heart_full {
-  opacity: 1;
-  transition: all 4000ms;
+  opacity: 0;
+  transition: all 1000ms;
   color: transparent;
   transform: scale(1);
   transform-origin: 50% bottom;
 }
 .fa-heart_full:hover {
   opacity: 1;
-  transform: scale(1);
   background-image: linear-gradient(#FF79DA, #9356DC);
   background-clip: text;
 }

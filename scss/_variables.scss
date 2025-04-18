@@ -22,9 +22,15 @@ $form-background-color: #EAEAEA;
 
 $btn-background-color: linear-gradient($secondary-color, $primary-color);
 
-/*Variables for keyframes appearance aplied on menu-cars*/
+/*Variables for keyframes appearance applied on menu-cards*/
 $nb-card: 9;
 
 $anim-duration: 4500ms;
 
 $anim-delay: $anim-duration / $nb-card;
+
+$nb-card_alt: 10;
+
+$anim-duration_alt: 5000ms;
+
+$anim-delay_alt: $anim-duration_alt / $nb-card_alt;
