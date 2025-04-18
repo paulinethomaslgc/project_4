@@ -1,5 +1,6 @@
 @import 'mixins';
 @import 'variables';
+@import 'loader';
 
 * {
    font-family: 'Roboto';
@@ -24,6 +25,7 @@
     width: 100%;
     margin-top: -2.5rem;
     position: relative;
+    
     
     @media (min-width: 768px) {
         width: 75%;
@@ -84,6 +86,8 @@
         }
     }
 
+    
+
     &_card {
         @include card;
         display: flex;
@@ -93,6 +97,13 @@
         padding: 0.75rem 1rem;
         margin-bottom: 0.75rem;
         gap: 1.5rem;
+        opacity: 0;
+        animation: appearance $anim-duration forwards;
+        @for $i from 1 through $nb-card {
+            &--#{$i} {
+                animation-delay: $anim-delay * $i;
+            }
+        }
 
         @media (min-width: 768px) {
             width: 100%;   
@@ -120,3 +131,18 @@
     margin-bottom: 1.5rem;
 }
 
+$nb-card: 9;
+
+$anim-duration: 4500ms;
+    
+$anim-delay: $anim-duration / $nb-card;
+
+@keyframes appearance {
+    0% {
+        opacity: 0;
+    }
+       
+    100% {
+        opacity: 1;
+    }
+}

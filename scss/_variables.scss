@@ -21,3 +21,10 @@ $main-font-color: #000000;
 $form-background-color: #EAEAEA;
 
 $btn-background-color: linear-gradient($secondary-color, $primary-color);
+
+/*Variables for keyframes appearance aplied on menu-cars*/
+$nb-card: 9;
+
+$anim-duration: 4500ms;
+
+$anim-delay: $anim-duration / $nb-card;

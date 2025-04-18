@@ -143,3 +143,29 @@ body {
 a {
     text-decoration: none;
 }
+
+.fa-heart {
+    font-size: 21px;
+     position: absolute;
+     margin-top: -8px;
+     cursor: pointer;
+ 
+     &_empty {
+         color: $form-background-color;
+     }
+    
+     &_full {
+         opacity: 1;
+         transition: all 4000ms;
+         color: transparent;
+         transform: scale(1);
+         transform-origin: 50% bottom;
+ 
+         &:hover {
+             opacity: 1;
+             transform: scale(1);
+             background-image: $btn-background-color;
+             background-clip: text;
+         }
+     }
+     }
