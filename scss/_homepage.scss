@@ -1,6 +1,7 @@
- @import 'mixins';
- @import 'variables';
- @import 'loader';
+ @use 'mixins';
+ @use 'variables';
+ @use 'loader';
+ @use 'color';
 
  * {
     font-family: 'Roboto';
@@ -18,7 +19,7 @@
 .form-container {
     display: flex;
     justify-content: center;
-    background-color: $form-background-color;
+    background-color: color.$form-background-color;
     gap: 1rem;
     padding: 1rem 0;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
@@ -31,12 +32,12 @@
     }
         
     &_logo {
-        color: $footer-background-color;
+        color: color.$footer-background-color;
     }
 
     &_input {
         border: none;
-        background: $form-background-color;
+        background: color.$form-background-color;
         font-size: 16px;
         text-align: center;
     }
@@ -47,7 +48,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    background: $primary-background-color;
+    background: color.$primary-background-color;
     padding: 1.5rem 0 3.75rem 0;
 
     @media (min-width: 768px) {
@@ -65,12 +66,12 @@
     &_text {
         font-size: 18px;
         font-weight: 300;
-        color: $footer-background-color;
+        color: color.$footer-background-color;
         margin: 0 2rem 1.75rem 2rem;
     }
 
     &_btn {
-        @include btn;
+        @include mixins.btn;
         padding: 1rem 1.25rem;
         width: 14rem;
     }
@@ -104,8 +105,8 @@
 }
 
 .step-container {
-    @include card;
-    background: $primary-background-color;
+    @include mixins.card;
+    background: color.$primary-background-color;
     display: flex;
     padding: 1.5rem;
     margin-bottom: 1.5rem;
@@ -131,7 +132,7 @@
     }
 
     &_ordinal-nb {
-        background: $primary-color;
+        background: color.$primary-color;
         border-radius: 1rem;
         font-size: 12px;
         padding: 5px 9px;
@@ -141,12 +142,12 @@
     } 
 
         &_icon {
-            color: $light-icon-color;
+            color: color.$light-icon-color;
             padding: 1.5rem;
         }
 
        &_txt {
-           color: $main-font-color;
+           color: color.$main-font-color;
         }
     }
 
@@ -154,7 +155,7 @@
 
 .restaurant-section {
     padding: 3.5rem 1rem 4rem 1rem;
-    background-color: $primary-background-color;
+    background-color: color.$primary-background-color;
 
     @media (min-width: 768px) {
         padding: 3.5rem 2rem 0 2rem;
@@ -191,7 +192,7 @@
 }
 
 .restaurant-card {
-    @include card;
+    @include mixins.card;
     width:100%;
     display: flex;
     flex-direction: column;
@@ -207,8 +208,8 @@
    
 
     &_tag {
-            color: $tag-font-color;
-            background:  $tertiary-color;
+            color: color.$tag-font-color;
+            background:  color.$tertiary-color;
             font-size: 14px;
             font-weight: 500;
             padding: 7px 9px;
@@ -229,8 +230,8 @@
         display:flex;
         justify-content: space-between;
         width: 100%;
-        background: $secondary-background-color;
-        color: $main-font-color;
+        background: color.$secondary-background-color;
+        color: color.$main-font-color;
         padding: 1rem 2rem 1rem 1rem;
         border-radius: 0 0 1.25rem 1.25rem;
 

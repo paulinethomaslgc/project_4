@@ -1,9 +1,10 @@
-@import 'homepage';
-@import 'restaurant-page';
+@use 'homepage';
+@use 'restaurant-page';
+@use 'mixins';
+@use 'variables';
+@use 'color';
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-@import 'mixins';
-@import 'variables';
 
 * {
     font-family: 'Roboto';
@@ -65,11 +66,11 @@ body {
 }
 
 .fa-arrow-left {
-        color: $main-font-color;
+        color: color.$main-font-color;
     }
 
 .btn_command {
-        @include btn;
+        @include mixins.btn;
         padding: 1rem 3rem;
 
         &_disposition {
@@ -85,7 +86,7 @@ body {
 }
 
 .footer-container {
-    background: $footer-background-color;
+    background: color.$footer-background-color;
     padding: 1.375rem 0 0.875rem 1.5rem;
     width: 100%;
 
@@ -109,13 +110,13 @@ body {
     }
 
     &_icon {
-        color: $secondary-background-color;
+        color: color.$secondary-background-color;
         width: 12px;
         height:13px;
     }
 
     &_title {
-        color: $secondary-background-color;
+        color: color.$secondary-background-color;
         font-family: 'Shrikhand';
         font-weight: 400;
         font-size: 18;
@@ -130,7 +131,7 @@ body {
     }
     
     &_link {
-        color: $secondary-background-color;
+        color: color.$secondary-background-color;
         text-decoration: none;
         margin-bottom: 0.5rem;
         font-size: 16px;
@@ -149,19 +150,33 @@ a {
  
      &_empty {
          color: black;
+         opacity: 1;
+         background-color: color.$btn-background-color;
+         transition: opacity 500ms;
+         &:hover {
+            opacity: 0;
+         }
      }
     
      &_full {
          opacity: 0;
-         transition: all 1000ms;
+         transition: opacity 300ms;
          color: transparent;
-         transform: scale(1);
-         transform-origin: 50% bottom;
+         cursor: pointer;
  
          &:hover {
              opacity: 1;
-             background-image: $btn-background-color;
+             background-image: color.$btn-background-color;
              background-clip: text;
+             transition: opacity 300ms;
          }
+
+         &:not(:hover) {
+            opacity: 0;
+            background-image: color.$btn-background-color;
+            background-clip: text;
+            transition: opacity 300ms;
+        }
+
      }
  }

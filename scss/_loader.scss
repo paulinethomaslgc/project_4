@@ -1,8 +1,12 @@
+@use "variables";
+@use "color";
 
 .loader-background {
-    background: lighten($color: $form-background-color, $amount: 10);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: lighten($color: color.$tertiary-color, $amount: 20);
     z-index: 998;
-    
     width: 100%;
     height: 100vh;
     position: fixed;
@@ -10,18 +14,18 @@
     left: 0;
     bottom: 0;
     right: 0;
-    opacity: 0;
-    transform: scale(0);
-    animation: loading 1500ms;
+    animation: 2s loading cubic-bezier(0, 0, 1, -0.45);
+    animation-fill-mode: forwards;
 }
 
 .loader {
-    border-left: 1rem solid lighten($primary-color, 10);
-    border-right: 1rem solid lighten($primary-color, 30);
-    width: 15rem;
-    height: 15rem;
-    border-top: 1rem solid lighten($primary-color, 5);
-    border-bottom: 1rem solid lighten($primary-color, 18);
+    
+    border-left: 1rem solid lighten(color.$primary-color, 10);
+    border-right: 1rem solid lighten(color.$primary-color, 30);
+    width: 20rem;
+    height: 20rem;
+    border-top: 1rem solid lighten(color.$primary-color, 5);
+    border-bottom: 1rem solid lighten(color.$primary-color, 18);
     border-radius: 50%;
     margin: auto;
     position: fixed;
@@ -32,19 +36,20 @@
     }
     @keyframes loading {
         0% {
-            transform: scale(1);
             opacity: 0.9;
+            z-index: 999;
         }
         50% {
             opacity: 0.7;
+            z-index: 999;
         }
         90% {
-            transform: scale(1);
             opacity: 0;
+            z-index: -1;
         }
         100% {
-            transform: scale(0);
             opacity: 0;
+            z-index: -1;
         }
     }
 
@@ -76,5 +81,34 @@
         }
         100% {
             opacity: 1;
+        }
+    }
+
+    @keyframes heart-filling {
+        0% {
+            opacity: 0;
+        }
+
+        95% {
+            opacity: 0.8;
+        }
+
+        100% {
+            opacity: 1;
+            
+        }
+    }
+
+    @keyframes heart-fading {
+        0% {
+            opacity: 1;
+        }
+
+        95% {
+            opacity: 0.8;
+        }
+
+        100% {
+            opacity: 0;
         }
     }

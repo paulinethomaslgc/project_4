@@ -1,38 +1,25 @@
-/*buttons style*/
+@use 'variables';
+@use "color";
 
+/*buttons style*/
 @mixin btn {
-    background: $btn-background-color;
+    background: color.$btn-background-color;
     border: none;
     border-radius: 1.8rem;
-    color: $secondary-background-color;
+    color: color.$secondary-background-color;
     font-size: 16px;
     font-weight: 500;
     box-shadow: 0px 4px 4px rgb(0, 0, 0, 0.5);
     cursor: pointer;
     padding: 1rem 3rem;
-    position: relative;
-    z-index: 1;
-    
+   
+/*replace animation by a simple change during hover,  box-shadow*/
     &:hover {
-        &::after {
-            opacity: 1;
-        }
-    }
-    &::after {
-        content: "";
-        border-radius: 1.8rem;
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background: linear-gradient(lighten($secondary-color, 5), lighten($primary-color, 5));
-        box-shadow: 0px 9px 9px rgb(0, 0, 0, 0.5);
-        opacity: 0;
-        z-index: -1;
-        transition: opacity 500ms;
+        background: linear-gradient(lighten(color.$secondary-color, 5), lighten(color.$primary-color, 5));
+        box-shadow: 0px 6px 6px rgb(0, 0, 0, 0.4);
     }
 }
+
 
        
        

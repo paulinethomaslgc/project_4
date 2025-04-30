@@ -1,6 +1,7 @@
-@import 'mixins';
-@import 'variables';
-@import 'loader';
+@use 'mixins';
+@use 'variables';
+@use 'loader';
+@use "color";
 
 * {
    font-family: 'Roboto';
@@ -20,7 +21,7 @@
 
 .menu {
     padding: 2rem 1rem;
-    background: $primary-background-color;
+    background: color.$primary-background-color;
     border-radius: 2.5rem 2.5rem 0 0;
     width: 100%;
     margin-top: -2.5rem;
@@ -62,6 +63,13 @@
 
     &_part { 
         padding: 0 1rem 2.5rem 1rem;
+        opacity: 0;
+        animation: appearance variables.$anim-duration forwards;
+        @for $i from 1 through variables.$nb-part {
+            &--#{$i} {
+                animation-delay: variables.$anim-delay * $i;
+            }
+        }
 
         @media (min-width: 768px) {
            width: 75%;
@@ -81,32 +89,23 @@
         &_underlined {
             text-decoration: underline;
             text-underline-offset: 13px;
-            text-decoration-color: $tertiary-color;
+            text-decoration-color: color.$tertiary-color;
             text-decoration-thickness: 3px;
         }
     }
-
     
 
     &_card {
-        @include card;
+        @include mixins.card;
         display: flex;
         justify-content: space-between;
-        background: $secondary-background-color;
+        background: color.$secondary-background-color;
         align-items: flex-end;
         padding: 0.75rem 1rem;
         margin-bottom: 0.75rem;
         gap: 1.5rem;
-        opacity: 0;
-        animation: appearance $anim-duration forwards;
-        @for $i from 1 through $nb-card {
-            &--#{$i} {
-                animation-delay: $anim-delay * $i;
-            }
-        }
+       
 
-    
-   
         @media (min-width: 768px) {
             width: 100%;   
         }
@@ -126,25 +125,20 @@
             font-size: 15px;
             font-weight: 700;
         }
-    }
-    &_alt-card {
-        @include card;
-        display: flex;
-        justify-content: space-between;
-        background: $secondary-background-color;
-        align-items: flex-end;
-        padding: 0.75rem 1rem;
-        margin-bottom: 0.75rem;
-        gap: 1.5rem;
-        opacity: 0;
-        animation: appearance $anim-duration_alt forwards;
-        @for $n from 1 through $nb-card_alt {
-            &--#{$n} {
-                animation-delay: $anim-delay_alt * $n;
+        &_content {
+            display: flex;
+            justify-content: space-between;
+        }
+        &_subcontent {
+            display: flex;
+            justify-content: space-between;
+            
+            &_check {
+           
             }
         }
-        
     }
+   
 }
 
 .btn_command_disposition {
