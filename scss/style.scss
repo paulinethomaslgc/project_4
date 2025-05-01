@@ -145,13 +145,18 @@ a {
 .fa-heart {
     font-size: 21px;
     position: absolute;
-    right: 40px;
+    right: 2.5rem;
     cursor: pointer;
+    &_menu {
+        top: 2.5rem;
+    }
+    &_container {
+        display: flex;
+    }
  
      &_empty {
          color: black;
          opacity: 1;
-         background-color: color.$btn-background-color;
          transition: opacity 500ms;
          &:hover {
             opacity: 0;
@@ -166,7 +171,7 @@ a {
  
          &:hover {
              opacity: 1;
-             background-image: color.$btn-background-color;
+             background-image: color.$heart-background-color;
              background-clip: text;
              transition: opacity 300ms;
          }
