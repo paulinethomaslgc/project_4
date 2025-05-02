@@ -5,7 +5,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: color.$footer-background-color;
+    background: color.$form-background-color;
     z-index: 998;
     width: 100%;
     height: 100vh;
@@ -14,41 +14,38 @@
     left: 0;
     bottom: 0;
     right: 0;
-    animation: 2s loading cubic-bezier(0, 0, 1, -0.45);
+    animation: 1000ms loading cubic-bezier(0, 0, 1, -0.45);
     animation-fill-mode: forwards;
 }
 
 .loader {
     
-    border-left: 1rem solid lighten(color.$primary-color, 10);
-    border-right: 1rem solid lighten(color.$primary-color, 30);
-    width: 20rem;
-    height: 20rem;
-    border-top: 1rem solid lighten(color.$primary-color, 5);
-    border-bottom: 1rem solid lighten(color.$primary-color, 18);
+    
+    border: none;
+    
     border-radius: 50%;
     margin: auto;
     position: fixed;
     z-index: 999;
     top: 0; left: 0; right: 0; bottom: 0;
     animation: spin 500ms linear infinite;
-    &_2 {
-    border-left: 0.75rem solid lighten(color.$primary-color, 10);
-    border-right: 0.75rem solid lighten(color.$primary-color, 30);
-    border-top: 0.75rem solid lighten(color.$primary-color, 5);
-    border-bottom: 0.75rem solid lighten(color.$primary-color, 18);
-    width: 15rem;
-    height: 15rem;
-    
-    
+
+    &_1{
+    width: 10rem;
+    height: 10rem;
+    border-bottom: 0.4rem solid color.$primary-color;
     }
+
+    &_2 {
+    width: 6rem;
+    height: 6rem;
+    border-top: 0.3rem solid color.$tertiary-color;
+    }
+
     &_3 {
-        border-left: 0.3rem solid lighten(color.$primary-color, 20);
-        border-right: 0.3rem solid lighten(color.$primary-color, 40);
-        border-top: 0.3rem solid lighten(color.$primary-color, 10);
-        border-bottom: 0.3rem solid lighten(color.$primary-color, 23);
-        width: 5rem;
-        height: 5rem;
+        border-left: 0.1rem solid color.$secondary-color;
+        width: 2rem;
+        height: 2rem;
     }
 }
 
@@ -59,7 +56,7 @@
             z-index: 999;
         }
 
-        10% {
+        /*10% {
             opacity: 0.9;
             z-index: 999;
         }
@@ -76,7 +73,7 @@
         90% {
             opacity: 0;
             z-index: -1;
-        }
+        }*/
         100% {
             opacity: 0;
             z-index: -1;
@@ -86,21 +83,19 @@
     @keyframes spin {
         0% {
             transform: rotate(0deg);
-            opacity: .4;
+            opacity: .3;
             
         }
-        20% {
+       /* 20% {
             transform: rotate(180deg);
             opacity: .6;
-            
-            
         }
       
         
         80% {
-            transform: rotate(350deg);
+            transform: rotate(355deg);
             opacity: 1;
-        }
+        }*/
 
         100% {
             transform: rotate(360deg);
