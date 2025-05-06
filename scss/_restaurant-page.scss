@@ -109,9 +109,11 @@
         overflow: hidden;
         &:hover > .menu_card_subcontent {
             margin-right: 0px;
+            transition: all 1s;
         }
         &:hover > .menu_card_content {
             width: calc(100% - 150px);
+            transition: all 1s;
            /* @media (min-width: 450px) {
                 width: 80%;
             }*/
@@ -145,6 +147,7 @@
                 flex-direction: column;
                 overflow: hidden;
                 width: 100%;
+                transition: all 1s;
             }
         }
 
@@ -168,6 +171,7 @@
             align-items: flex-end;
             margin-right: -68px;
             border-radius: 0 1.25rem 1.25rem 0;
+            transition: margin-right 1s;
           
             &_check {
                 display: flex;
