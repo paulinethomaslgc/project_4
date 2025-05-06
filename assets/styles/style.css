@@ -476,21 +476,12 @@
   justify-content: space-between;
   background: #FFFFFF;
   align-items: flex-end;
-  padding-left: 1rem;
   margin-bottom: 0.75rem;
-  gap: 1.5rem;
   overflow: hidden;
 }
-.menu_card:hover > .menu_card_subcontent {
+.menu_card:hover > .menu_card_check {
   margin-right: 0px;
-  transition: all 1s;
-}
-.menu_card:hover > .menu_card_content {
-  width: calc(100% - 150px);
-  transition: all 1s;
-  /* @media (min-width: 450px) {
-       width: 80%;
-   }*/
+  transition: margin-right 300ms ease-in-out;
 }
 @media (min-width: 768px) {
   .menu_card {
@@ -506,56 +497,55 @@
   text-overflow: ellipsis;
   width: 100%;
 }
-.menu_card_txt {
+.menu_card_subtitle {
   font-size: 15px;
   font-weight: 300;
-  padding-bottom: 0.75rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   width: 100%;
 }
-.menu_card_txt_content {
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  width: 100%;
-  transition: all 1s;
-}
 .menu_card_price {
   font-size: 15px;
   font-weight: 700;
-  margin-right: 1.75rem;
-  padding-bottom: 0.75rem;
 }
 .menu_card_content {
   display: flex;
-  flex-direction: column;
-  width: calc(100% - 80px);
-}
-.menu_card_subcontent {
-  display: flex;
-  height: 100%;
+  flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
-  margin-right: -68px;
-  border-radius: 0 1.25rem 1.25rem 0;
-  transition: margin-right 1s;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  gap: 1rem;
+  transition: width 300ms ease-in-out;
 }
-.menu_card_subcontent_check {
+.menu_card_txt-container {
+  width: calc(100% - 2.5rem);
+  transition: width 300ms ease-in-out;
+}
+.menu_card_check {
   display: flex;
   justify-content: center;
   height: 100%;
-  padding-right: 0 1.25rem;
+  margin-right: -68px;
   background-color: #99E2D0;
   border-radius: 0 1.25rem 1.25rem 0;
+  transition: margin-right 300ms ease-in-out;
+}
+.menu .menu_card_content:hover {
+  width: calc(100% - 68px);
+  transition: width 300ms ease-in-out;
+}
+.menu .menu_card_content:hover:hover > .menu_card_txt-container {
+  width: calc(100% - 3rem);
+  transition: width 300ms ease-in-out;
 }
 
 .fa-check {
   background-color: white;
   color: #99E2D0;
   padding: 2px 3px;
-  margin: 1.5rem;
+  margin: 1.6rem 1.25rem;
   border-radius: 50%;
 }
 
