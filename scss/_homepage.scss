@@ -1,6 +1,6 @@
  @use 'mixins';
  @use 'variables';
- @use 'loader';
+ @use 'animations';
  @use 'color';
 
  * {
@@ -12,8 +12,6 @@
 
 .section-title_size {
     font-size: 24px;
-
-    
 }
 
 .form-container {
@@ -78,7 +76,7 @@
 }
 
 .working-container {
-    padding: 3rem 2rem; 
+    padding: 3rem 1.5rem; 
     
     @media (min-width: 1024px) {
         padding-left: 7rem;
@@ -89,10 +87,7 @@
         padding-left: 11.25rem;
         padding-right: 11.25rem;
     }
-
-   
 }
-
 
 .working-cards_container {
     @media (min-width: 768px) {
@@ -100,8 +95,6 @@
         flex-wrap: wrap;
         justify-content: space-between;
     }
-
-    
 }
 
 .step-container {
@@ -123,9 +116,6 @@
         gap: 1rem;
         padding: 1.5rem;
     }
-    
-    
-    
 
     &_section-title {
         padding-bottom : 1.5rem;
@@ -151,10 +141,8 @@
         }
     }
 
-  
-
 .restaurant-section {
-    padding: 3.5rem 1rem 4rem 1rem;
+    padding: 3.5rem 1.5rem 4rem 1.5rem;
     background-color: color.$primary-background-color;
 
     @media (min-width: 768px) {
@@ -178,8 +166,6 @@
     @media (min-width: 768px) {
         padding-bottom: 0.5rem;
     }
-   
-   
 }
 
 .restaurant-cards_container {
@@ -204,8 +190,6 @@
         margin-bottom: 1.75rem;
         margin-top: 1.25rem;
     }
-
-   
 
     &_tag {
             color: color.$tag-font-color;
@@ -237,10 +221,13 @@
 
         &_txt h3 {
             padding-bottom: 5px;
+            font-size: 18px;
+            font-weight: 700;
+        }
 
+        &_txt p {
+            font-size: 17px;
+            font-weight: 300;
         }
     }
-    
-
 }
-

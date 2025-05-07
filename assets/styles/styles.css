@@ -81,6 +81,36 @@
     z-index: -1;
   }
 }
+@keyframes appearance {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes heart-filling {
+  0% {
+    opacity: 0;
+  }
+  95% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes heart-fading {
+  0% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 * {
   font-family: "Roboto";
   margin: 0;
@@ -595,6 +625,11 @@ body {
   justify-content: center;
 }
 
+.like {
+  width: 22px;
+  height: 21px;
+}
+
 .footer-container {
   background: #353535;
   padding: 1.375rem 0 0.875rem 1.5rem;
@@ -668,19 +703,29 @@ a {
 }
 .fa-heart_empty {
   color: black;
-  background-color: linear-gradient(#FF79DA, #9356DC);
+  opacity: 1;
+  transition: opacity 500ms;
+}
+.fa-heart_empty:hover {
+  opacity: 0;
 }
 .fa-heart_full {
   opacity: 0;
-  transition: all 300ms cubic-bezier(1, 0, 0.83, 0.67);
+  transition: opacity 300ms;
   color: transparent;
-  background-image: linear-gradient(#FF79DA, #9356DC);
-  background-clip: text;
-  transform-origin: 50% bottom;
   cursor: pointer;
 }
 .fa-heart_full:hover {
   opacity: 1;
+  background-image: linear-gradient(to top, #FF79DA, #9356DC);
+  background-clip: text;
+  transition: opacity 300ms;
+}
+.fa-heart_full:not(:hover) {
+  opacity: 0;
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  background-clip: text;
+  transition: opacity 300ms;
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,68 @@
+@use "variables";
+@use "color";
+
+.loader-background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: color.$form-background-color;
+    z-index: 998;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    animation: 3000ms loading cubic-bezier(0, 0, 1, -0.45);
+    animation-fill-mode: forwards;
+}
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+      
+.loader_bar {
+  width: 0.5rem;
+  height: 1rem;
+  background-color: color.$primary-color;
+  animation: growing-bars 1500ms infinite;
+  animation-direction: alternate;
+  @for $n from 0 through 6 {
+    &--#{$n} {
+      animation-delay: 150ms * $n;
+    }
+  }
+}
+   
+@keyframes growing-bars {
+  0%, 100% {
+    transform: scale(1, 0.5);
+    opacity: 0.1;
+    }
+       
+  50% {
+    transform: scale(1.8, 7.5);
+    opacity: 1;
+    }
+}
+    
+@keyframes loading {
+  0% {
+    opacity: 1;
+    z-index: 999;
+    }
+
+  90% {
+    opacity: 0.8;
+    z-index: 999;
+    }
+
+  100% {
+    opacity: 0;
+    z-index: -1;
+    }
+}

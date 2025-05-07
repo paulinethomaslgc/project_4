@@ -1,6 +1,6 @@
 @use 'mixins';
 @use 'variables';
-@use 'loader';
+@use 'animations';
 @use "color";
 
 * {
@@ -64,7 +64,7 @@
     }
 
     &_part { 
-        padding: 0 1rem 2.5rem 1rem;
+        padding-bottom: 2.5rem;
         opacity: 0;
         animation: appearance variables.$anim-duration forwards;
         @for $i from 1 through variables.$nb-part {
@@ -95,7 +95,6 @@
             text-decoration-thickness: 3px;
         }
     }
-    
 
     &_card {
         @include mixins.card;
@@ -131,8 +130,6 @@
             overflow: hidden;
             text-overflow: ellipsis;
             width: 100%;
-
-           
         }
 
         &_price {
@@ -162,11 +159,11 @@
                 height: 100%;
                 margin-right: -68px;
                 background-color: color.$tertiary-color;
-                border-radius: 0 1.25rem 1.25rem 0;
+                border-radius: 0 1rem 1rem 0;
                 transition: margin-right 300ms ease-in-out;
         }
-}
-    
+    }
+}    
 .menu_card_content:hover {
             width: calc(100% - 68px);
             transition: width 300ms ease-in-out;
@@ -174,8 +171,8 @@
                 width: calc(100% - 3rem);
             transition: width 300ms ease-in-out;
             }
-    }
-}
+        }
+
 
 .fa-check {
     background-color: white;

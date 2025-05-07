@@ -1,7 +1,7 @@
 
-/*Variables for keyframes appearance applied on menu-cards*/
+/*Variables for keyframes appearance on menu-cards*/
 $nb-part: 3;
 
 $anim-duration: 900ms;
 
-$anim-delay: $anim-duration / $nb-part;
+$anim-delay: calc($anim-duration / $nb-part);
