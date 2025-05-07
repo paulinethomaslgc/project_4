@@ -5,7 +5,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: color.$form-background-color;
+    background: color.$primary-background-color;
     z-index: 998;
     width: 100%;
     height: 100vh;
@@ -14,7 +14,7 @@
     left: 0;
     bottom: 0;
     right: 0;
-    animation: 3000ms loading cubic-bezier(0, 0, 1, -0.45);
+    animation: 2000ms loading cubic-bezier(0, 0, 1, -0.45);
     animation-fill-mode: forwards;
 }
 
@@ -64,5 +64,15 @@
   100% {
     opacity: 0;
     z-index: -1;
+    }
+}
+
+@keyframes appearance {
+  0% {
+    opacity: 0;
+    }
+
+  100% {
+    opacity: 1;
     }
 }
